@@ -1,60 +1,181 @@
 <!DOCTYPE html>
+<!--
+  Draft updated November 1, 2026 — Created using Anthropic Claude.
+  Keep this note on internal versions only: have a human review and verify the
+  policy, then remove this comment before pushing to main (push publishes the
+  policy to the public ve-kit-privacy repo / GitHub Pages).
+-->
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Shifty — Privacy Policy</title>
+    <title>VE Kit — Privacy Policy</title>
   </head>
   <body>
-    <h1>Shifty Privacy Policy</h1>
-    <p><strong>Last updated:</strong> September 19, 2026</p>
+    <h1>VE Kit Privacy Policy</h1>
+    <p><strong>Last updated:</strong> November 1, 2026</p>
     <p>
       Published copy:
-      <a href="https://github.com/tristanwerkmeister/shifty-privacy">github.com/tristanwerkmeister/shifty-privacy</a>
-      (synced from the private Shifty repo; Chrome Web Store uses GitHub Pages).
+      <a href="https://github.com/tristanwerkmeister/ve-kit-privacy">github.com/tristanwerkmeister/ve-kit-privacy</a>
+      (synced from the private VE Kit repo; Chrome Web Store uses GitHub Pages).
     </p>
 
     <p>
-      Shifty is a browser extension for CNN Video Editorial staff. It reads
-      schedule information displayed on Humanity (When I Work) pages that you
-      already have access to, and formats that information for copy or email
-      drafts.
+      VE Kit is a browser extension for CNN Video Editorial staff. It works
+      only on pages you already have access to, and formats information shown
+      there so you can copy it or prepare an email draft:
     </p>
+    <ul>
+      <li>
+        <strong>Humanity (When I Work)</strong> — reads the schedule shown in
+        List View and formats daily shift lists and weekly staffing notes.
+      </li>
+      <li>
+        <strong>TikTok Studio</strong> (<code>tiktok.com/tiktokstudio/content</code>)
+        — reads the post captions, publish times, view counts and post links
+        shown in your Posts list, and lists the three most-viewed posts for a
+        day you choose.
+      </li>
+      <li>
+        <strong>Domo</strong> (<code>cnn.domo.com</code>) — on the Top Vertical
+        Videos card, requests that card's video titles and Video Starts from
+        Domo using your existing signed-in session (the same request the Domo
+        page makes to draw the card), and lists the top three.
+      </li>
+      <li>
+        <strong>VN affiliate content</strong>
+        (<code>vn.turner.com/VN/viewAffiliateVideo.jsp</code>) — reads the
+        Status column of the affiliate list and hides rows whose status you
+        have not ticked.
+      </li>
+      <li>
+        <strong>StoryHub</strong> (Airtable, <code>airtable.com</code>) — on a
+        content record, reads the headline, people and description shown there,
+        and when you click its buttons writes into the record's description for
+        you: the release note, the handover note and a link to the record's
+        script. It also fills in Airtable's Add Content form when you click
+        <strong>Create VV</strong> or <strong>16x9</strong>. These edits are made
+        in your browser, as you, exactly as if you had typed them.
+      </li>
+      <li>
+        <strong>Stellar</strong> (<code>cms.cnn.com</code>) — when you click
+        <strong>Shared component</strong> in StoryHub, opens Stellar and fills in
+        a new video resource with the headline, description, CNN ID and the
+        photos you picked.
+      </li>
+      <li>
+        <strong>SharePoint</strong> (<code>warnermedia.sharepoint.com</code>,
+        the VEScripts site) — when you click <strong>Create script</strong>,
+        copies the team's Word script template into that day's Daily Scripts
+        folder, named after the record's headline, and opens it.
+      </li>
+      <li>
+        <strong>Outlook</strong> (<code>outlook.office.com</code>, or your
+        default mail app) — when you click <strong>Send to FC</strong> in
+        StoryHub, opens a new email draft to the fact-check team with the
+        record's headline, its script link and your first name, and copies the
+        same text to your clipboard. You review and send it yourself.
+      </li>
+    </ul>
 
     <h2>Data collection</h2>
     <ul>
       <li>
-        Shifty does <strong>not</strong> send schedule data to the developer or
-        to third-party analytics servers.
+        VE Kit does <strong>not</strong> send schedule, video or analytics data
+        to the developer or to any third-party server, and does not use
+        analytics or tracking.
       </li>
       <li>
-        Processing happens locally in your browser on the active Humanity tab.
+        Processing happens locally in your browser on the tab you are using.
+        VE Kit makes network requests only to the services you already use,
+        using your existing signed-in session, and nowhere else:
+        <ul>
+          <li>
+            <strong>Domo</strong> — the Top Vertical Videos card request above.
+          </li>
+          <li>
+            <strong>SharePoint</strong> — for <strong>Create script</strong>:
+            it checks that day's Daily Scripts folder, checks whether a script
+            with that name already exists, copies the template there and reads
+            the new file's link. These requests act with your own SharePoint
+            permissions, so the new file shows you as its author. To make them,
+            VE Kit may briefly open a VEScripts page in a background tab and
+            close it again, or ask you to sign in to SharePoint in a new tab.
+          </li>
+        </ul>
       </li>
       <li>
-        Optional settings (output mode, toggles, dates) are stored with Chrome
-        extension storage on your device only.
+        Video lists from TikTok Studio and Domo are held in memory for the open
+        page only and are not saved.
+      </li>
+      <li>
+        Optional Humanity panel settings (output mode, toggles, panel
+        collapsed/expanded), the statuses ticked in the VN affiliate filter,
+        the name and StoryHub settings you enter on the welcome or settings
+        page, your Send to FC email wording, when you accepted this
+        policy, each StoryHub record's progress and script link, and the photos
+        you pick for a Stellar thumbnail are stored with Chrome extension
+        storage on your device only.
+      </li>
+      <li>
+        VE Kit uses Chrome's debugger permission for one thing: to click
+        <strong>Save</strong> in Stellar's Image Settings when it uploads a
+        thumbnail for you, because that button only responds to a real mouse
+        click. Chrome shows a "debugging this browser" bar while it does. It
+        reads nothing through the debugger and only acts on the Stellar tab
+        it is filling in.
+      </li>
+      <li>
+        VE Kit keeps a debug log of what it does on StoryHub and Stellar (for
+        example headlines, release note text, names shown on the record and
+        the page markup it was working with) in Chrome extension storage on
+        your device, for up to 7 days. It is never sent anywhere
+        automatically. You can download, copy or clear it from the VE Kit
+        settings page, and choose whether to share it with whoever supports
+        VE Kit for you.
+      </li>
+      <li>
+        Information leaves the page only when you choose to: by clicking Copy
+        (to your clipboard), by downloading an email draft (.eml) to your
+        computer, or by opening an email draft with Send to FC. VE Kit never
+        sends email or posts anything for you.
       </li>
     </ul>
 
     <h2>Permissions</h2>
     <ul>
       <li>
-        <strong>activeTab / scripting</strong> — read the open Humanity schedule
-        page when you use Shifty.
+        <strong>Site access</strong> — Humanity (<code>humanity.com</code>),
+        TikTok Studio's Posts page (<code>tiktok.com/tiktokstudio/content</code>),
+        Domo (<code>cnn.domo.com</code>), the VN affiliate content list
+        (<code>vn.turner.com/VN/viewAffiliateVideo.jsp</code>), StoryHub
+        (<code>airtable.com</code>) and Stellar (<code>cms.cnn.com</code>), so
+        VE Kit can show its panels and buttons and read those pages; SharePoint
+        (<code>warnermedia.sharepoint.com</code>) for Create script.
       </li>
       <li>
-        <strong>clipboardWrite</strong> — copy formatted roster text when you
-        choose Copy.
+        <strong>activeTab / scripting</strong> — show or hide VE Kit on the
+        open supported page when you click the extension icon, and run Create
+        script's SharePoint requests inside a VEScripts page.
       </li>
       <li>
-        <strong>storage</strong> — remember your panel preferences on this
-        device.
+        <strong>debugger</strong> — click Save in Stellar's Image Settings, as
+        described above.
+      </li>
+      <li>
+        <strong>clipboardWrite</strong> — copy the formatted roster, note or
+        video list when you click Copy.
+      </li>
+      <li>
+        <strong>storage / unlimitedStorage</strong> — remember the settings and
+        data listed above on this device; unlimited storage is needed only for
+        the thumbnail photos, which can be large.
       </li>
     </ul>
 
     <h2>Contact</h2>
     <p>
-      Questions about this policy or the Shifty extension:
+      Questions about this policy or the VE Kit extension:
       <a href="mailto:tristan.werkmeister@cnn.com">tristan.werkmeister@cnn.com</a>.
     </p>
   </body>
